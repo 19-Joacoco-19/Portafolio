@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="../static/css/style.css" />
+  <title>Portafolio</title>
+</head>
+
+<body>
+
+<header class="header">
+  <nav class="header__nav main-nav">
+    <ul class="main-nav__list main-list">
+      <li><a class="list-item__link" href="#home">HOME</a></li>
+      <li><a class="list-item__link" href="#about">ABOUT</a></li>
+      <li><a class="list-item__link" href="#skills">MY SKILLS</a></li>
+      <li><a class="list-item__link" href="#feedback">FEEDBACK</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+
+<!-- HOME -->
+<section class="home" id="home">
+  <h1 class="home__title">NAME SURNAME</h1>
+  <p class="home__subtitle">WEB-DEVELOPER, PYTHON PROGRAMMER</p>
+</section>
+
+<!-- ABOUT -->
+<section class="about" id="about">
+  <h2 class="about__title">ABOUT ME</h2>
+
+  <div class="about__info info-block">
+    <p class="info-block__text">
+      Entrada de diario-Público objetivo
+      ¿Qué es el público destinatario?
+      Es el grupo de personas interesadas en mi trabajo y en los servicios que ofrezco a través de mi portfolio web.
+      Contenidos de la página:
+      Presentación personal, proyectos realizados, tecnologías que manejo, habilidades, repositorios de código y datos de contacto.
+      1. Edad: 20 a 45 años (reclutadores, emprendedores o líderes de proyectos).
+      2. Género: No influye.
+      3. Idioma: Español e inglés.
+      4. Finalidad: Mostrar mis proyectos y habilidades para obtener oportunidades laborales o colaboraciones.
+      Resumen: “Mi portfolio será atractivo para reclutadores y emprendedores de habla hispana e inglesa que busquen un desarrollador web con conocimientos en programación y creación de proyectos digitales.”
+    </p>
+
+    <img class="info-block__img"
+         src="../static/img/perfil.png"
+         width="250"
+         height="250">
+  </div>
+</section>
+
+<!-- SKILLS -->
+<section class="skills" id="skills">
+  <h2 class="skills__title">MY SKILLS</h2>
+
+  <form action="/" method="POST">
+    <ul class="skills-list">
+
+      <li class="skill">
+        <img src="../static/img/python.png" width="150">
+        <span class="skill__info">
+          Python Backend y automatización
+        </span>
+        <input class="skill__button"
+               type="submit"
+               name="button_python"
+               value="SHOW PROJECT">
+      </li>
+
+      <li class="skill">
+        <img src="../static/img/discord.png" width="150">
+        <span class="skill__info">
+          Discord Bots Bots personalizados
+        </span>
+        <input class="skill__button"
+               type="submit"
+               name="button_discord"
+               value="SHOW PROJECT">
+      </li>
+
+      <li class="skill">
+        <img src="../static/img/html.png" width="150">
+        <span class="skill__info">
+          HTML & CSS Maquetación web
+        </span>
+        <input class="skill__button"
+               type="submit"
+               name="button_html"
+               value="SHOW PROJECT">
+      </li>
+
+      <li class="skill">
+        <img src="../static/img/servidor.png" width="150">
+        <span class="skill__info">
+          SQL Gestión de bases de datos
+        </span>
+        <input class="skill__button"
+               type="submit"
+               name="button_db"
+               value="SHOW PROJECT">
+      </li>
+
+    </ul>
+  </form>
+
+  <!-- PROYECTOS DINÁMICOS -->
+
+  {% if button_python %}
+  <div class="project">
+    <img class="project__img"
+         src="../static/img/python-project.png"
+         width="500">
+    <a class="project__link"
+       href="https://github.com/19-Joacoco-19/Calculator"
+       target="_blank">
+      Abierto en GitHub
+    </a>
+  </div>
+  {% endif %}
+
+  {% if button_discord %}
+  <div class="project">
+    <img class="project__img"
+         src="../static/img/ecobotimg.png"
+         width="500">
+    <a class="project__link"
+       href="https://github.com/19-Joacoco-19/Ecobot"
+       target="_blank">
+      Abierto en GitHub
+    </a>
+  </div>
+  {% endif %}
+
+  {% if button_html %}
+  <div class="project">
+    <img class="project__img"
+         src="../static/img/web.png"
+         width="500">
+    <a class="project__link"
+       href="https://github.com/19-Joacoco-19/Basketball-HTML"
+       target="_blank">
+      Abierto en GitHub
+    </a>
+  </div>
+  {% endif %}
+
+  {% if button_db %}
+  <div class="project">
+    <img class="project__img"
+         src="../static/img/diary.png"
+         width="500">
+    <a class="project__link"
+       href="https://github.com/19-Joacoco-19/Diary"
+       target="_blank">
+      Abierto en GitHub
+    </a>
+  </div>
+  {% endif %}
+
+</section>
+
+<!-- FEEDBACK -->
+<section class="feedback" id="feedback">
+  <h2 class="feedback__title">FEEDBACK</h2>
+
+  <form action="/" method="POST" class="feedback__form form">
+    <label>
+      <input type="email"
+             name="email"
+             class="form__input"
+             placeholder="E-mail"
+             required>
+    </label>
+
+    <label>
+      <textarea name="text"
+                class="form__input"
+                rows="6"
+                placeholder="Comment"
+                required></textarea>
+    </label>
+
+    <button class="form__button" type="submit">
+      SEND
+    </button>
+  </form>
+</section>
+
+</main>
+
+<!-- FOOTER -->
+<footer style="text-align:center; padding:40px 0;">
+  <p>
+    <a href="https://github.com/19-Joacoco-19" target="_blank">GitHub</a> |
+  </p>
+  <p>© 2026 Joaquín Aarón Loayza Ríos</p>
+</footer>
+
+</body>
+</html>
